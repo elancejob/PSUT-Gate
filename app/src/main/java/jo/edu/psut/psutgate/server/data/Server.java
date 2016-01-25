@@ -37,10 +37,10 @@ public class Server {
     }
 
     public ServerResponse getClubs() {
-        return makeGet("http://private-c1e73-psutgate.apiary-mock.com/get-club.php");
+        return makeGet("http://private-c1e73-psutgate.apiary-mock.com/get-clubs.php");
     }
 
-    public ServerResponse getCourse() {
+    public ServerResponse getCourses() {
         return makeGet("http://private-c1e73-psutgate.apiary-mock.com/get-courses.php");
     }
 

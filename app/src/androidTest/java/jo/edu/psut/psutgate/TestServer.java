@@ -16,7 +16,11 @@ import jo.edu.psut.psutgate.server.data.ServerResponse;
 public class TestServer extends InstrumentationTestCase {
 
     private static final String TAG = "Test";
-
+    public void testAll(){
+        testFaculties();
+        testClubs();
+        testCourse();
+    }
     public void testFaculties() {
         ServerResponse response = Server.getInstance().getFaculties();
         assertNotNull(response);
@@ -48,7 +52,7 @@ public class TestServer extends InstrumentationTestCase {
     }
 
     public void testCourse() {
-        ServerResponse response = Server.getInstance().getCourse();
+        ServerResponse response = Server.getInstance().getCourses();
         assertNotNull(response);
         assertEquals(ServerResponse.TYPE_COURSE, response.result_type);
         assertEquals(3, response.results.length);
